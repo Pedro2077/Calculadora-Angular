@@ -1,15 +1,17 @@
-<div>
+<div class="calculadora-container">
     <h2>Calculadora Simples</h2>
-    <input type="number" [(ngModel)]="valor1" placeholder="Valor 1">
-    <input type="number" [(ngModel)]="valor2" placeholder="Valor 2">
-  
-    <div>
-      <button (click)="somar()">Somar</button>
-      <button (click)="subtrair()">Subtrair</button>
-      <button (click)="multiplicar()">Multiplicar</button>
-      <button (click)="dividir()">Dividir</button>
+    <div class="inputs-container">
+      <input type="number" [(ngModel)]="valor1" placeholder="Valor 1" class="input-box">
+      <input type="number" [(ngModel)]="valor2" placeholder="Valor 2" class="input-box">
     </div>
   
-    <h3>Resultado: {{ resultado }}</h3>
+    <div class="buttons-container">
+      <button (click)="somar()" class="btn">Somar</button>
+      <button (click)="subtrair()" class="btn">Subtrair</button>
+      <button (click)="multiplicar()" class="btn">Multiplicar</button>
+      <button (click)="dividir()" class="btn">Dividir</button>
+    </div>
+  
+    <h3>Resultado: <span class="resultado">{{ resultado }}</span></h3>
   </div>
   
